@@ -27,6 +27,14 @@
     console.log(user);
     console.log(user[0]);
     </script> --}}
+    <form action="users" method="POST">
+    @csrf
+        <label for="">Username: </label>
+        <input type="text" name="username" id=""><br><br>
+        <label for="">Password: </label>
+        <input type="password" name="password" id=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
 
 
 

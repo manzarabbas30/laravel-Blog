@@ -20,4 +20,8 @@ class UserController extends Controller
         $data = ["Fatima","Manzar","Muntazir","Moatsim"];
         return view('users', ['myName'=>$data]);
     } 
+
+    function getFormData(Request $req){
+        return $req->input();
+    }
 }
