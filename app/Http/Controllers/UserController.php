@@ -14,4 +14,10 @@ class UserController extends Controller
     {
         return view('users', ['user'=>$name]);
     } 
+
+    function loadForBlade()
+    {
+        $data = ["Fatima","Manzar","Muntazir","Moatsim"];
+        return view('users', ['myName'=>$data]);
+    } 
 }

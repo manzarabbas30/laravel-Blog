@@ -26,3 +26,5 @@ Route::get('/user/{id}',[UserController::class,'show']);
 
 Route::get('/users/{name}',[UserController::class,'loadName']);
 
+Route::get('/users',[UserController::class,'loadForBlade']);
+
