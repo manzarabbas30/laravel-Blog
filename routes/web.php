@@ -21,12 +21,14 @@ Route::get('/contact', function () {
 //     return view('users',['user'=>$name]);
 // });
 
-// Route::get('/user/{id}',[UserController::class,'show']);
+Route::get('/user/{id}',[UserController::class,'show']);
 
 
-// Route::get('/users/{name}',[UserController::class,'loadName']);
+Route::get('/users/{name}',[UserController::class,'loadName']);
 
 // Route::get('/users',[UserController::class,'loadForBlade']);
 Route::post('/users',[UserController::class,'getFormData']);
 Route::view('users','/users');
+Route::view('check','/login');
+Route::view('noAccess','/noAccess');
 
