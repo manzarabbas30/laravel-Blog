@@ -27,12 +27,33 @@
     console.log(user);
     console.log(user[0]);
     </script> --}}
+
+
+    {{-- print_r($errors); --}}
+
+    
+    {{-- @if ($errors->any())
+        @foreach ($errors->all() as $error)
+    <div style="color:red">
+        {{$error}}
+    </div>
+        @endforeach
+
+    @endif --}}
     <form action="users" method="POST">
     @csrf
         <label for="">Username: </label>
-        <input type="text" name="username" id=""><br><br>
+        <input type="text" name="username" id="">
+        <span style="color:red">@error('username')
+            {{$message}}
+        @enderror</span>
+        <br><br>
         <label for="">Password: </label>
-        <input type="password" name="password" id=""><br><br>
+        <input type="password" name="password" id="">
+        <span style="color:red">@error('username')
+            {{$message}}
+        @enderror</span>
+        <br><br>
         <input type="submit" value="Submit">
     </form>
 

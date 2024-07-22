@@ -22,6 +22,9 @@ class UserController extends Controller
     } 
 
     function getFormData(Request $req){
-        return $req->input();
+        return $req->validate([
+             'username' => 'required | min:5' ,
+            'password' => 'required | min:5'
+        ]);
     }
 }
