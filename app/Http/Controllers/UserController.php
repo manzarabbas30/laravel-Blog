@@ -25,6 +25,8 @@ class UserController extends Controller
         return $req->validate([
              'username' => 'required | min:5' ,
             'password' => 'required | min:5'
+        ],[
+            'username.required' => 'Username empty h'
         ]);
     }
 }

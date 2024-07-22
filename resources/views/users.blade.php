@@ -40,17 +40,24 @@
         @endforeach
 
     @endif --}}
+
+    <style>
+    .error-input{
+        border: 1px solid red;
+    } 
+    </style>
     <form action="users" method="POST">
     @csrf
         <label for="">Username: </label>
-        <input type="text" name="username" id="">
+        <input type="text" name="username" id="" value="{{old('username')}}"
+        class="{{$errors->first('username')?'error-input':''}}">
         <span style="color:red">@error('username')
             {{$message}}
         @enderror</span>
         <br><br>
         <label for="">Password: </label>
-        <input type="password" name="password" id="">
-        <span style="color:red">@error('username')
+        <input type="password" name="password" id="" >
+        <span style="color:red">@error('password')
             {{$message}}
         @enderror</span>
         <br><br>
