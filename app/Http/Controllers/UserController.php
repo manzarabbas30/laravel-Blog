@@ -23,7 +23,7 @@ class UserController extends Controller
 
     function getFormData(Request $req){
         return $req->validate([
-             'username' => 'required | min:5' ,
+             'username' => 'required | min:5 | Uppercase' ,
             'password' => 'required | min:5'
         ],[
             'username.required' => 'Username empty h'
