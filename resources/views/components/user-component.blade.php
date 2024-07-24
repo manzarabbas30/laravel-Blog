@@ -3,6 +3,7 @@
         This is a header Component for {{$title}} page
     </h1>
     <h2>{{URL::current()}}</h2>
+{{-- <a href="{{route('hm')}}">Home</a><br><br> --}}
 <a href="{{URL::to('/')}}">Home</a><br><br>
 <a href="{{URL::to('/about')}}">About</a><br><br>
 <a href="{{URL::to('/blog')}}">Blog</a><br><br>

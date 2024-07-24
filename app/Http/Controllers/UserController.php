@@ -29,4 +29,14 @@ class UserController extends Controller
             'username.required' => 'Username empty h'
         ]);
     }
+
+
+    function showMe(){
+        return "This the student list";
+    }
+
+    
+    function add(){
+        return "Add student details";
+    }
 }
