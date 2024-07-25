@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Middleware\checkAge;
+use App\Http\Middleware\CountryCheck;
 Route::get('/', function () {
     return view('home');
 });
 
 
-// Route::view('/users/profile/home','home')->name('hm');
+Route::view('/users/profile/home','home')->name('hm');
 
 Route::get('/about', function () {
     return view('about-us');
@@ -21,8 +22,17 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+// Route::middleware('check1')->group(function(){
+//     Route::view('/','home');
+//     Route::view('/about','about-us');
+//     Route::view('/blog','blog');
+//     Route::view('/contact','contact');
+// });
 
-// Route::view('users','/users');
+
+// Route::view('/about','about-us')->middleware([checkAge::class,CountryCheck::class]);
+// Route::view('/blog','blog')->middleware([checkAge::class,CountryCheck::class]);
+
 // Route::get('/users/{name}', function ($name) {
 //     return view('users',['user'=>$name]);
 // });

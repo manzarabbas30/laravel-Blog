@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class checkAge
+class CountryCheck
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,7 @@ class checkAge
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // echo "<pre>";
-        // print_r($request);
-        if($request->age < 18){
+        if($request->country != "pakistan"){
             return redirect('noAccess');
         }
         return $next($request);
