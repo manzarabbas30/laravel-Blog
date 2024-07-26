@@ -60,7 +60,7 @@ Route::prefix('/student')->group(function(){
 });
 
 
-Route::get('/get-users',[UserController::class,'users']);
+Route::get('/users',[UserController::class,'users']);
 
 
 

@@ -7,41 +7,48 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    function show($id){
-        return "Hello this is my controller. And this my id: ".$id;
+    function show($id)
+    {
+        return "Hello this is my controller. And this my id: " . $id;
     }
 
     function loadName($name)
     {
-        return view('users', ['user'=>$name]);
-    } 
+        return view('users', ['user' => $name]);
+    }
 
     function loadForBlade()
     {
-        $data = ["Fatima","Manzar","Muntazir","Moatsim"];
-        return view('users', ['myName'=>$data]);
-    } 
+        $data = ["Fatima", "Manzar", "Muntazir", "Moatsim"];
+        return view('users', ['myName' => $data]);
+    }
 
-    function getFormData(Request $req){
+    function getFormData(Request $req)
+    {
         return $req->validate([
-             'username' => 'required | min:5 | Uppercase' ,
+            'username' => 'required | min:5 | Uppercase',
             'password' => 'required | min:5'
-        ],[
+        ], [
             'username.required' => 'Username empty h'
         ]);
     }
 
 
-    function showMe(){
+    function showMe()
+    {
         return "This the student list";
     }
 
-    
-    function add(){
+
+    function add()
+    {
         return "Add student details";
     }
 
-    function users(){
-        return DB::Select('select * from users');
+    function users()
+    {
+        $users = DB::Select('select * from users');
+
+        return view('users', ['users' => $users]);
     }
 }
