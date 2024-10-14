@@ -68,7 +68,8 @@ Route::get('/students',[StudentController::class,'getdata']);
 // Route::get('/users',[UserController::class,'getUserDataApi']);
 
 
-Route::get('/users',[UserController::class,'queries']);
+// Route::get('/users',[UserController::class,'queries']);
+Route::get('/users',[UserController::class,'queries_eloquent']);
 
 
 

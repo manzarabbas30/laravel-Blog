@@ -169,7 +169,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $user)
+                @foreach ($users as $user)
                     <tr class="">
                         <td scope="row">{{ $user->id}}</td>
                         <td>{{ $user->name }}</td>
