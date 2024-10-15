@@ -109,30 +109,54 @@ class UserController extends Controller
 
 }
 
-    function queries_eloquent(){
-        // $response = User::all();
-        // $response = User::get();
-        // $response = User::where('email','manzar@gmail.com')->get();
-        // $response = User::where('email','manzar@gmail.com')->first();
-        // $response = User::find(2);
-        // $response = User::insert([
-        //     'name'=>'muntazir',
-        //     'email'=>'muntazir@gmail.com',
-        //     'password'=>'2243245',
-        // ]);
-        // $response = User::where('email','muntazir@gmail.com')->update(['name'=>'muntazir abbas']);
+    // function queries_eloquent(){
+    //     // $response = User::all();
+    //     // $response = User::get();
+    //     // $response = User::where('email','manzar@gmail.com')->get();
+    //     // $response = User::where('email','manzar@gmail.com')->first();
+    //     // $response = User::find(2);
+    //     // $response = User::insert([
+    //     //     'name'=>'muntazir',
+    //     //     'email'=>'muntazir@gmail.com',
+    //     //     'password'=>'2243245',
+    //     // ]);
+    //     // $response = User::where('email','muntazir@gmail.com')->update(['name'=>'muntazir abbas']);
 
-        $response = User::where('email','muntazir@gmail.com')->delete();
+    //     $response = User::where('email','muntazir@gmail.com')->delete();
 
 
-        // $response = array($response);
-        if($response){
-            echo'data deleted';
-        }
-        else{
-            echo'data not deleted';
-        }
-        // return view("users",['users'=>$response]);
+    //     // $response = array($response);
+    //     if($response){
+    //         echo'data deleted';
+    //     }
+    //     else{
+    //         echo'data not deleted';
+    //     }
+    //     // return view("users",['users'=>$response]);
+    // }
+    function getRouteMethod()
+    {
+        return 'get route method';
     }
 
+
+    function postRouteMethod()
+    {
+        return 'post route method';
+    }
+    function putRouteMethod()
+    {
+        return 'put route method';
+    }
+    function patchRouteMethod()
+    {
+        return 'patch route method';
+    }
+    function deleteRouteMethod()
+    {
+        return 'delete route method';
+    }
 }
+
+
+

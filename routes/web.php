@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 
-Route::view('/users/profile/home','home')->name('hm');
+// Route::view('/users/profile/home','home')->name('hm');
 
 Route::get('/about', function () {
     return view('about-us');
@@ -38,15 +38,15 @@ Route::get('/contact', function () {
 //     return view('users',['user'=>$name]);
 // });
 
-Route::get('/user/{id}',[UserController::class,'show']);
+// Route::get('/user/{id}',[UserController::class,'show']);
 
 
-Route::get('/users/{name}',[UserController::class,'loadName']);
+// Route::get('/users/{name}',[UserController::class,'loadName']);
 
 // Route::get('/users',[UserController::class,'loadForBlade']);
-Route::post('/users',[UserController::class,'getFormData']);
+// Route::post('/users',[UserController::class,'getFormData']);
 
-Route::view('/users','users');
+// Route::view('/users','users');
 Route::view('/check','login');
 Route::view('/noAccess','noAccess');
 
@@ -62,14 +62,18 @@ Route::prefix('/student')->group(function(){
 
 
 // Route::get('/users',[UserController::class,'users']);
-Route::get('/students',[StudentController::class,'getdata']);
+// Route::get('/students',[StudentController::class,'getdata']);
 
 
 // Route::get('/users',[UserController::class,'getUserDataApi']);
 
 
 // Route::get('/users',[UserController::class,'queries']);
-Route::get('/users',[UserController::class,'queries_eloquent']);
+// Route::get('/users',[UserController::class,'queries_eloquent']);
 
-
-
+Route::get('/users',[UserController::class,'getRouteMethod']);
+// Route::post('/users',[UserController::class,'postRouteMethod']);
+// Route::put('/users',[UserController::class,'putRouteMethod']);
+// Route::patch('/users',[UserController::class,'patchRouteMethod']);
+Route::delete('/users',[UserController::class,'deleteRouteMethod']);
+Route::view('/form','users');

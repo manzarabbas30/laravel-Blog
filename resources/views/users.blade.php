@@ -77,7 +77,7 @@
             border: 1px solid red;
         }
     </style>
-    <form action="users" method="POST">
+    {{-- <form action="users" method="POST">
         @csrf
         <label for="">Username: </label>
         <input type="text" name="username" id="" value="{{ old('username') }}"
@@ -97,7 +97,6 @@
         </span>
         <br><br>
         <input type="submit" value="Submit">
-    </form>
 
 
     <br>
@@ -123,7 +122,7 @@
             </tbody>
         </table>
     </div> --}}
-    <br>
+    {{-- <br> --}}
 
     {{-- <div class="table-responsive">
         <table class="table table-primary">
@@ -158,7 +157,7 @@
 
 
 
-        <div class="table-responsive">
+        {{-- <div class="table-responsive">
         <table class="table table-primary">
             <thead>
                 <tr>
@@ -179,7 +178,17 @@
                 @endforeach
 
             </tbody>
-        </table>
+        </table> --}}
+
+
+        <form action="/users" method="post">
+            @csrf
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="text" name="name" id="">
+            <input type="password" name="pasword" id="">
+            <input type="submit" name="submit" id="">
+        </form>
+
     </div>
 </body>
 
