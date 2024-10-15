@@ -156,6 +156,20 @@ class UserController extends Controller
     {
         return 'delete route method';
     }
+
+    function any()
+    {
+        return 'any route method';
+    }
+
+    function group1()
+    {
+        return 'group1 route methods';
+    }
+    function group2()
+    {
+        return 'group2 route methods';
+    }
 }
 
 

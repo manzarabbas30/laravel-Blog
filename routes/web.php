@@ -71,9 +71,12 @@ Route::prefix('/student')->group(function(){
 // Route::get('/users',[UserController::class,'queries']);
 // Route::get('/users',[UserController::class,'queries_eloquent']);
 
-Route::get('/users',[UserController::class,'getRouteMethod']);
+// Route::get('/users',[UserController::class,'getRouteMethod']);
 // Route::post('/users',[UserController::class,'postRouteMethod']);
 // Route::put('/users',[UserController::class,'putRouteMethod']);
 // Route::patch('/users',[UserController::class,'patchRouteMethod']);
-Route::delete('/users',[UserController::class,'deleteRouteMethod']);
-Route::view('/form','users');
+// Route::delete('/users',[UserController::class,'deleteRouteMethod']);
+// Route::any('/users',[UserController::class,'any']);
+// Route::match(['post','put'],'/users',[UserController::class,'group1']);
+// Route::match(['delete','get'],'/users',[UserController::class,'group2']);
+// Route::view('/form','users');
