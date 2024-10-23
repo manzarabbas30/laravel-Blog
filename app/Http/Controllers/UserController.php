@@ -185,6 +185,20 @@ class UserController extends Controller
         print_r($request->input()) .'<br><br>';
         print_r($request->collect()) .'<br><br>';
     }
+
+
+    function userlogin(Request $request){
+        $request->session()->put('username', $request->input('username'));
+        $request->session()->put('allData', $request->input());
+        // echo session('username');
+        return redirect('profile');
+    }
+
+    function logout(Request $request){
+        $request->session()->pull('username');
+        return redirect('profile');
+
+    }
 }
 
 
