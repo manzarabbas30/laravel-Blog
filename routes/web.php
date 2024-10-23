@@ -80,3 +80,6 @@ Route::prefix('/student')->group(function(){
 // Route::match(['post','put'],'/users',[UserController::class,'group1']);
 // Route::match(['delete','get'],'/users',[UserController::class,'group2']);
 // Route::view('/form','users');
+
+Route::post('/user',[UserController::class,'login']);
+Route::view('/form','users');

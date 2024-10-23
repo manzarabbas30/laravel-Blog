@@ -181,9 +181,8 @@
         </table> --}}
 
 
-        <form action="/users" method="post">
+        <form action="/user" method="post">
             @csrf
-            <input type="hidden" name="_method" value="DELETE">
             <input type="text" name="name" id="">
             <input type="password" name="pasword" id="">
             <input type="submit" name="submit" id="">

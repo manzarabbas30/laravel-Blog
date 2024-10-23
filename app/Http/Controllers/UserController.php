@@ -170,6 +170,21 @@ class UserController extends Controller
     {
         return 'group2 route methods';
     }
+
+
+
+    function login(Request $request){
+        echo $request->method().'<br><br>';
+        echo $request->url().'<br><br>';
+        echo $request->path().'<br><br>';
+        echo $request->ip().'<br><br>';
+        echo $request->isMethod('post').'<br><br>';
+        echo $request->is('user').'<br><br>';
+        echo $request->input('name').'<br><br>';
+        echo $request->name.'<br><br>';
+        print_r($request->input()) .'<br><br>';
+        print_r($request->collect()) .'<br><br>';
+    }
 }
 
 
