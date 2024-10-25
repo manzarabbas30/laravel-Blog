@@ -180,14 +180,31 @@
             </tbody>
         </table> --}}
 
-
+        {{-- <h3>Add new User</h3>
         <form action="/user" method="post">
             @csrf
             <input type="text" name="name" id="">
             <input type="password" name="pasword" id="">
             <input type="submit" name="submit" id="">
-        </form>
+        </form> --}}
 
+        {{session('message');}}
+        {{session('name');}}
+        {{-- {{session()->reflash();}} --}}
+        {{session()->keep('name');}}
+        <h3>Add new User</h3>
+        <form action="/users" method="post">
+            @csrf
+            <label for="">Name</label>
+            <input type="text" name="name" id=""><br><br>
+            <label for="">phone</label>
+            <input type="text" name="phone" id=""><br><br>
+            <label for="">Email</label>
+            <input type="text" name="email" id=""><br><br>
+            <label for="">Password</label>
+            <input type="password" name="password" id="">
+            <input type="submit" name="submit" id="">
+        </form>
     </div>
 </body>
 

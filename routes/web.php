@@ -81,7 +81,10 @@ Route::prefix('/student')->group(function(){
 // Route::match(['delete','get'],'/users',[UserController::class,'group2']);
 // Route::view('/form','users');
 
-Route::post('/login',[UserController::class,'userlogin']);
-Route::get('/logout',[UserController::class,'logout']);
-Route::view('/login','login');
-Route::view('/profile','profile');
+// Route::post('/login',[UserController::class,'userlogin']);
+// Route::get('/logout',[UserController::class,'logout']);
+// Route::view('/login','login');
+// Route::view('/profile','profile');
+
+Route::post('/users',[UserController::class,'flashSession']);
+Route::view('/users','users');

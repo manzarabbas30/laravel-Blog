@@ -199,6 +199,15 @@ class UserController extends Controller
         return redirect('profile');
 
     }
+
+
+    function flashSession(Request $request){
+        $request->session()->flash('message', 'User Data Added Successfully');
+        $request->session()->flash('name', 'Manzar');
+
+        // echo session('username');
+        return redirect('users');
+    }
 }
 
 
