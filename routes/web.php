@@ -91,3 +91,9 @@ Route::prefix('/student')->group(function(){
 
 Route::post('/users',[UserController::class,'upload_file']);
 Route::view('/users','users');
+
+Route::get('about/{lang}',function($lang){
+App::setLocale($lang);
+return view('about-us');
+    
+});
