@@ -86,5 +86,8 @@ Route::prefix('/student')->group(function(){
 // Route::view('/login','login');
 // Route::view('/profile','profile');
 
-Route::post('/users',[UserController::class,'flashSession']);
+// Route::post('/users',[UserController::class,'flashSession']);
+// Route::view('/users','users');
+
+Route::post('/users',[UserController::class,'upload_file']);
 Route::view('/users','users');

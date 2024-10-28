@@ -208,6 +208,17 @@ class UserController extends Controller
         // echo session('username');
         return redirect('users');
     }
+
+
+    function upload_file(Request $request){
+        // $path=$request->file('image')->store('public');
+        $path=$request->file('image')->storeAs('public','houseroof.jpg');
+        $filenameArray=explode('/', $path);
+        $filename=$filenameArray[1];
+        // echo $filename;
+        // echo session('username');
+        return view('users',['path' => $filename]);
+    }
 }
 
 

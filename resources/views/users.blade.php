@@ -187,13 +187,13 @@
             <input type="password" name="pasword" id="">
             <input type="submit" name="submit" id="">
         </form> --}}
-
+{{-- 
         {{session('message');}}
-        {{session('name');}}
+        {{session('name');}} --}}
         {{-- {{session()->reflash();}} --}}
-        {{session()->keep('name');}}
+        {{-- {{session()->keep('name');}} --}}
         <h3>Add new User</h3>
-        <form action="/users" method="post">
+        <form action="/users" method="post" enctype="multipart/form-data">
             @csrf
             <label for="">Name</label>
             <input type="text" name="name" id=""><br><br>
@@ -201,10 +201,15 @@
             <input type="text" name="phone" id=""><br><br>
             <label for="">Email</label>
             <input type="text" name="email" id=""><br><br>
+            <label for="">Image</label>
+            <input type="file" name="image" id=""><br><br>
             <label for="">Password</label>
             <input type="password" name="password" id="">
             <input type="submit" name="submit" id="">
         </form>
+
+        <br>
+        <img src="{{url('storage/'. $path)}}" width="300px" alt="">
     </div>
 </body>
 
