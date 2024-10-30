@@ -92,8 +92,24 @@ Route::prefix('/student')->group(function(){
 Route::post('/users',[UserController::class,'upload_file']);
 Route::view('/users','users');
 
-Route::get('about/{lang}',function($lang){
-App::setLocale($lang);
-return view('about-us');
-    
+
+Route::middleware('Setlang')->group(function(){
+
+    Route::get('/', function () {
+        return view('home');
+    });
+
+    Route::get('about/',function(){
+    return view('about-us');
+        
+    });
+
+
+
+    Route::get('setlang/{lang}',function($lang){
+        Session::put('lang', $lang);
+        return redirect('/about');
+    });
+
+
 });
