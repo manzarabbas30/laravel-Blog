@@ -116,7 +116,8 @@ Route::middleware('Setlang')->group(function(){
 
 
 
-// Route::get('/student',[StudentController::class,'getdata']);
 
 Route::post('/student',[StudentController::class,'addstudent']);
 Route::view('/student','student');
+
+Route::get('/liststudent',[StudentController::class,'getdata']);

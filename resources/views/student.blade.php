@@ -32,7 +32,7 @@
     {{-- <h1>This is a user page {{$user}}</h1> --}}
     <h1>This is a Student page</h1>
 
-    {{-- <div class="table-responsive">
+    <div class="table-responsive">
         <table class="table table-primary">
             <thead>
                 <tr>
@@ -53,7 +53,7 @@
                 @endforeach
 
             </tbody>
-        </table> --}}
+        </table>
 
         <form action="/student" method="post">
             @csrf

@@ -11,6 +11,8 @@ class StudentController extends Controller
         $stdData = Student::all();
         return view("student",["std"=>$stdData]);
     }
+
+    
     function addstudent(Request $request){
         $student = new Student();
         $student->Name = $request->name;
