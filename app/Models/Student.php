@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
+
+        // // Specify the actual table name
+        // protected $table = 'students';
+
+        // // Optional: if you want Laravel to manage timestamps
+        // public $timestamps = true;
 }

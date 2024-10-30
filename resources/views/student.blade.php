@@ -32,7 +32,7 @@
     {{-- <h1>This is a user page {{$user}}</h1> --}}
     <h1>This is a Student page</h1>
 
-    <div class="table-responsive">
+    {{-- <div class="table-responsive">
         <table class="table table-primary">
             <thead>
                 <tr>
@@ -53,7 +53,19 @@
                 @endforeach
 
             </tbody>
-        </table>
+        </table> --}}
+
+        <form action="/student" method="post">
+            @csrf
+            <label for="">Name</label>
+            <input type="text" name="name" id=""><br><br>
+            <label for="">Email</label>
+            <input type="text" name="email" id=""><br><br>
+            <label for="">Batch</label>
+            <input type="number" name="batch" id=""><br><br>
+
+            <input type="submit" name="submit" id="">
+        </form>
     </div>
 
 </body>

@@ -62,7 +62,7 @@ Route::prefix('/student')->group(function(){
 
 
 // Route::get('/users',[UserController::class,'users']);
-// Route::get('/students',[StudentController::class,'getdata']);
+Route::get('/students',[StudentController::class,'getdata']);
 
 
 // Route::get('/users',[UserController::class,'getUserDataApi']);
@@ -113,3 +113,10 @@ Route::middleware('Setlang')->group(function(){
 
 
 });
+
+
+
+// Route::get('/student',[StudentController::class,'getdata']);
+
+Route::post('/student',[StudentController::class,'addstudent']);
+Route::view('/student','student');
