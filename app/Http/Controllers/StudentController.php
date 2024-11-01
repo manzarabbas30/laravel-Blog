@@ -20,10 +20,23 @@ class StudentController extends Controller
         $student->Batch = $request->batch;
         $student->save();
         if ($student){
-            return "Record Added!";
+            return redirect("liststudent");
         }
         else {
             return "Record Not Added!";
         }
   }
+
+  function Deletestd($id){
+    
+    $delid = Student::destroy($id);
+
+    if($delid){
+        return redirect("liststudent");
+    }
+    else{
+        return 'Student data not Delete';
+    }
+  }
+
 }

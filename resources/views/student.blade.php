@@ -36,19 +36,19 @@
         <table class="table table-primary">
             <thead>
                 <tr>
-                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Batch</th>
+                    <th scope="col">Operation</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($std as $s)
                     <tr class="">
-                        <td scope="row">{{$s->Id}}</td>
                         <td>{{$s->Name}}</td>
                         <td>{{$s->Email}}</td>
                         <td>{{$s->Batch}}</td>
+                        <td><a href="{{'delete/'. $s->id}}">Delete</a></td>
                     </tr>
                 @endforeach
 

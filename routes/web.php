@@ -62,7 +62,7 @@ Route::prefix('/student')->group(function(){
 
 
 // Route::get('/users',[UserController::class,'users']);
-Route::get('/students',[StudentController::class,'getdata']);
+// Route::get('/students',[StudentController::class,'getdata']);
 
 
 // Route::get('/users',[UserController::class,'getUserDataApi']);
@@ -121,3 +121,5 @@ Route::post('/student',[StudentController::class,'addstudent']);
 Route::view('/student','student');
 
 Route::get('/liststudent',[StudentController::class,'getdata']);
+
+Route::get('/delete/{id}',[StudentController::class,'Deletestd']);
