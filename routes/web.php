@@ -122,4 +122,8 @@ Route::view('/student','student');
 
 Route::get('/liststudent',[StudentController::class,'getdata']);
 
-Route::get('/delete/{id}',[StudentController::class,'Deletestd']);
+Route::get('/delete/{id}',[StudentController::class,'DeleteStd']);
+
+Route::get('/edit/{id}',[StudentController::class,'edit']);
+
+Route::Put('/edit-student/{id}',[StudentController::class,'editStd']);

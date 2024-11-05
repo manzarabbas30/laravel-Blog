@@ -27,7 +27,7 @@ class StudentController extends Controller
         }
   }
 
-  function Deletestd($id){
+  function DeleteStd($id){
     
     $delid = Student::destroy($id);
 
@@ -36,6 +36,28 @@ class StudentController extends Controller
     }
     else{
         return 'Student data not Delete';
+    }
+  }
+
+
+  function edit($id){
+    
+    $editid = Student::find($id);
+
+    return  view('edit', ['data'=>$editid]);
+  }
+
+  function editStd(Request $request,$id){
+    
+    $student = Student::find(  $id);
+    $student->Name = $request->name;
+    $student->Email = $request->email;
+    $student->Batch = $request->batch;
+    if ($student->save()){
+        return redirect("liststudent");
+    }
+    else {
+        return "Record Not Updated!";
     }
   }
 

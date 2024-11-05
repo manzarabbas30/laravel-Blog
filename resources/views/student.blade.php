@@ -48,7 +48,7 @@
                         <td>{{$s->Name}}</td>
                         <td>{{$s->Email}}</td>
                         <td>{{$s->Batch}}</td>
-                        <td><a href="{{'delete/'. $s->id}}">Delete</a></td>
+                        <td><a href="{{'delete/'. $s->id}}">Delete </a>&nbsp; <a href="{{'edit/'. $s->id}}">edit</a></td>
                     </tr>
                 @endforeach
 
