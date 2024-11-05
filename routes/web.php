@@ -127,3 +127,5 @@ Route::get('/delete/{id}',[StudentController::class,'DeleteStd']);
 Route::get('/edit/{id}',[StudentController::class,'edit']);
 
 Route::Put('/edit-student/{id}',[StudentController::class,'editStd']);
+
+Route::get('/search',[StudentController::class,'search']);

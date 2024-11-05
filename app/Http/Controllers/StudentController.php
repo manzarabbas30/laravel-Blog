@@ -8,7 +8,9 @@ use PHPUnit\Framework\MockObject\Stub\ReturnReference;
 class StudentController extends Controller
 {
     function getdata(){
-        $stdData = Student::all();
+        // $stdData = Student::all();
+        $stdData = Student::paginate(3);
+
         return view("student",["std"=>$stdData]);
     }
 
@@ -59,6 +61,12 @@ class StudentController extends Controller
     else {
         return "Record Not Updated!";
     }
+  }
+
+  function search(Request $request){
+    $studentdata= Student::where('Name','like',"%$request->search%")->get();
+        return view("student",["std" => $studentdata,'search'=>$request->search]);
+        
   }
 
 }
