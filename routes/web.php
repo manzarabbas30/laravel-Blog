@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\imageController;
 use App\Http\Middleware\checkAge;
 use App\Http\Middleware\CountryCheck;
 Route::get('/', function () {
@@ -129,3 +130,9 @@ Route::get('/edit/{id}',[StudentController::class,'edit']);
 Route::Put('/edit-student/{id}',[StudentController::class,'editStd']);
 
 Route::get('/search',[StudentController::class,'search']);
+
+Route::post('/delete-multiple',[StudentController::class,'deleteMultiple']);
+
+
+Route::post('/addimage',[imageController::class,'addimage']);
+Route::get('/images',[imageController::class,'listimages']);

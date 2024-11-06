@@ -44,9 +44,13 @@
 
 </form>
     <div class="table-responsive">
+        <form action="/delete-multiple" method="post">
+            @csrf
+        <button>Delete</button><br><br>
         <table class="table table-primary">
             <thead>
-                <tr>
+                <tr>    
+                    <th>#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Batch</th>
@@ -56,6 +60,7 @@
             <tbody>
                 @foreach ($std as $s)
                     <tr class="">
+                    <td><input type="checkbox" name="ids[]" value="{{$s->id}}"></td>
                         <td>{{$s->Name}}</td>
                         <td>{{$s->Email}}</td>
                         <td>{{$s->Batch}}</td>
@@ -65,6 +70,7 @@
 
             </tbody>
         </table>
+    </form>
         {{$std->links()}}
         <br>
         <form action="/student" method="post">
