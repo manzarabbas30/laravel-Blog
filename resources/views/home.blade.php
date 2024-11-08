@@ -21,6 +21,12 @@
 <button type="button" class="btn btn-dark">Dark</button>
 
 <button type="button" class="btn btn-link">Link</button>
+<x-view-component>
+
+
+    <x-slot name="Pagetitle">Home</x-slot>
+</x-view-component>
+
 </body>
 </html>
 

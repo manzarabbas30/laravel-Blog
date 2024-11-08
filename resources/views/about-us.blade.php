@@ -9,3 +9,9 @@
 <h1>{{__('about.heading1')}}</h1>
 <h2>{{__('about.heading2')}}</h2>
 <h2>{{__('about.heading3',['name'=> 'Manzar Abbas'])}}</h2>
+
+<x-view-component>
+
+
+    <x-slot name="Pagetitle">about</x-slot>
+</x-view-component>
