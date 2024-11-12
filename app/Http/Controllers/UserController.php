@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Http;
 use App\Models\User;
 class UserController extends Controller
 {
+
+
     function show($id)
     {
         return "Hello this is my controller. And this my id: " . $id;
