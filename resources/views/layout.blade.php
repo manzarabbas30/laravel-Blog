@@ -24,6 +24,8 @@
 {{-- <h3>{{URL::previous()}}</h3> --}}
 {{-- <h3>{{URL::full()}}</h3> --}}
 
+<h5>To Rollback migration please type "php artisan migrate:rollback"</h5>
+
 
 
 </div>
