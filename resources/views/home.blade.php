@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,24 @@
 </x-view-component>
 
 </body>
-</html>
+</html> --}}
 
 
 
+
+
+@extends('layout')
+
+@section('title', 'Home page')
+
+
+@section('main')
+
+<div>
+<x-view-component>
+
+    <x-slot name="Pagetitle">Home</x-slot>
+</x-view-component>
+</div>
+
+@endsection
