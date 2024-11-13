@@ -34,7 +34,7 @@
 @section('main')
 @show()
 
-<footer style="background-color: lightblue; text-align:center; padding:20px; width:100%; position:fixed; bottom:0px;">
+<footer style="background-color: lightblue; text-align:center; padding:20px; width:100%;">
     <p>footer here!</p>
 </footer>
 </body>
