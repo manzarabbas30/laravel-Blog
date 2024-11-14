@@ -14,4 +14,12 @@ class Student extends Model
 
         // // Optional: if you want Laravel to manage timestamps
         // public $timestamps = true;
+
+        function getNameAttribute($val){
+            return strtolower($val);
+        }
+
+        function getEmailAttribute($val){
+            return strtolower($val);
+        }
 }

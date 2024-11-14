@@ -80,5 +80,7 @@ class StudentController extends Controller
         return "Multi data not deleted";
     }
   }
-
+  function accessorList(){
+    return Student::all();
+  }
 }
