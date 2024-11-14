@@ -95,6 +95,18 @@ Copy code
 php artisan migrate --path=<path_to_migration_file>
 Purpose: migrations only in the specified path, usually targeting a specific migration file or folder.
 
+
+
+
+------Maintaince code commands--------
+To go Website in Maintaince mode
+php artisan down 
+
+To go Website in Maintaince mode with secret key
+php artisan down --secret="manzar07"
+
+To come out Website from Maintaince mode
+php artisan up
 </pre>
 </div>
 
