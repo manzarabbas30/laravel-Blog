@@ -83,4 +83,16 @@ class StudentController extends Controller
   function accessorList(){
     return Student::all();
   }
+
+  function accessorSave(){
+    $student=new Student;
+
+    $student->name="Manzar Bukhari";
+    $student->email="ManzarBukhari@gmail.com";
+    $student->batch="4";
+
+    if($student->save()){
+        echo "Data saved successfully!";
+    }
+  }
 }

@@ -22,4 +22,12 @@ class Student extends Model
         function getEmailAttribute($val){
             return strtolower($val);
         }
+
+        function setEmailAttribute($val){
+            $this->attributes['email']=strtolower($val);
+        }
+
+        function setNameAttribute($val){
+            $this->attributes['name']=strtolower($val);
+        }
 }

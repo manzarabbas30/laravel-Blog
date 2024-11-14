@@ -137,3 +137,4 @@ Route::post('/delete-multiple',[StudentController::class,'deleteMultiple']);
 Route::post('/addimage',[imageController::class,'addimage']);
 Route::get('/images',[imageController::class,'listimages']);
 Route::get('/accessorList',[StudentController::class,'accessorList']);
+Route::get('/accessorSave',[StudentController::class,'accessorSave']);
