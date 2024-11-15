@@ -8,8 +8,13 @@ use App\Models\Seller;
 
 class sellerController extends Controller
 {
-    function sellerList(Request $request)
+    function sellerList()
     {
         return seller::find(2)->productData;
+    }
+
+    function manyList()
+    {
+        return seller::find(1)->productmanyData;
     }
 }

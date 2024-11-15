@@ -142,3 +142,4 @@ Route::get('/accessorSave',[StudentController::class,'accessorSave']);
 
 
 Route::get('/sellerList',[sellerController::class,'sellerList']);
+Route::get('/manyList',[sellerController::class,'manyList']);

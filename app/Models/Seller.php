@@ -11,4 +11,8 @@ class Seller extends Model
     function productData(){
         return $this->hasOne('App\Models\Product');
     }
+
+    function productmanyData(){
+        return $this->hasmany('App\Models\Product');
+    }
 }
