@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\imageController;
+use App\Http\Controllers\sellerController;
 use App\Http\Middleware\checkAge;
 use App\Http\Middleware\CountryCheck;
 Route::get('/', function () {
@@ -138,3 +139,6 @@ Route::post('/addimage',[imageController::class,'addimage']);
 Route::get('/images',[imageController::class,'listimages']);
 Route::get('/accessorList',[StudentController::class,'accessorList']);
 Route::get('/accessorSave',[StudentController::class,'accessorSave']);
+
+
+Route::get('/sellerList',[sellerController::class,'sellerList']);
