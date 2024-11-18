@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\imageController;
 use App\Http\Controllers\sellerController;
+use App\Http\Controllers\mailController;
 use App\Http\Middleware\checkAge;
 use App\Http\Middleware\CountryCheck;
 Route::get('/', function () {
@@ -144,3 +145,5 @@ Route::get('/accessorSave',[StudentController::class,'accessorSave']);
 Route::get('/sellerList',[sellerController::class,'sellerList']);
 Route::get('/manyList',[sellerController::class,'manyList']);
 Route::get('/manyToOne',[sellerController::class,'manyToOne']);
+Route::get('/sendmail',[mailController::class,'sendmail']);
+
