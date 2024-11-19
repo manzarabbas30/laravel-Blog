@@ -40,7 +40,10 @@ class welcomeMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'sendmail',
+            view: 'mailView',
+            with: [
+                'msg' => $this->msg,
+            ]
         );
     }
 

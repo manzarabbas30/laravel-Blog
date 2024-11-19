@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>HI There Manzar!</h1>
-</body>
-</html>
+<h3>Send Main from here </h3><br>
+
+<form action="/sendmail" method="post">
+    @csrf
+    <label for="">To</label>
+    <input type="text" name="to" id=""><br><br>
+    <label for="">Subject</label>
+    <input type="text" name="subject" id=""><br><br>
+    <label for="">Message</label>
+    <input type="text" name="msg" id=""><br><br>
+
+    <input type="submit" name="submit" id="">
+</form>

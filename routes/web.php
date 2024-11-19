@@ -145,5 +145,7 @@ Route::get('/accessorSave',[StudentController::class,'accessorSave']);
 Route::get('/sellerList',[sellerController::class,'sellerList']);
 Route::get('/manyList',[sellerController::class,'manyList']);
 Route::get('/manyToOne',[sellerController::class,'manyToOne']);
-Route::get('/sendmail',[mailController::class,'sendmail']);
+
+Route::post('/sendmail',[mailController::class,'sendmail']);
+Route::view('/sendmail','sendmail');
 
