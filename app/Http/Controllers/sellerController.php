@@ -23,4 +23,10 @@ class sellerController extends Controller
         $data=Product::with('seller')->get();
         return $data;
     }
+
+    function route_binding(Product $key){
+        // return $key->all();
+        return $key;
+    }
+    
 }

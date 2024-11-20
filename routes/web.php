@@ -160,3 +160,5 @@ Route::view('/sendmail','sendmail');
 // ->replaceFirst("Hi","Hello")
 // ->camel();
 // echo $info;
+
+Route::get('/route-binding/{key:seller_id}',[sellerController::class,'route_binding']);
