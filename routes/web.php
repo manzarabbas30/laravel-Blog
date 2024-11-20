@@ -162,3 +162,6 @@ Route::view('/sendmail','sendmail');
 // echo $info;
 
 Route::get('/route-binding/{key:seller_id}',[sellerController::class,'route_binding']);
+
+
+Route::get('/inlineblade',[UserController::class,'inlineblade']);

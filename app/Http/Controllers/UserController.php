@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use App\Models\User;
+use Illuminate\Support\Facades\Blade;
+
 class UserController extends Controller
 {
 
@@ -220,6 +222,12 @@ class UserController extends Controller
         // echo $filename;
         // echo session('username');
         return view('users',['path' => $filename]);
+    }
+
+
+    function inlineblade(){
+        $product_total="20";
+        return Blade::render('No of Products: {{$total}}',['total'=>$product_total]);
     }
 }
 

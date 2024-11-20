@@ -209,7 +209,8 @@
         </form>
 
         <br>
-        <img src="{{url('storage/'. $path)}}" width="300px" alt="">
+
+        {{-- <img src="storage/{{$path}}" width="300px" alt=""> --}}
     </div>
 </body>
 
