@@ -8,6 +8,8 @@ use App\Http\Controllers\sellerController;
 use App\Http\Controllers\mailController;
 use App\Http\Middleware\checkAge;
 use App\Http\Middleware\CountryCheck;
+use Illuminate\Support\Str;
+
 Route::get('/', function () {
     return view('home');
 });
@@ -149,3 +151,12 @@ Route::get('/manyToOne',[sellerController::class,'manyToOne']);
 Route::post('/sendmail',[mailController::class,'sendmail']);
 Route::view('/sendmail','sendmail');
 
+//fluent String
+
+// $info="Hi, There my name is Manzar";
+
+// $info=Str::of($info)
+// ->ucfirst()
+// ->replaceFirst("Hi","Hello")
+// ->camel();
+// echo $info;
