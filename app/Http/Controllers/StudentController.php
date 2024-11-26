@@ -95,4 +95,9 @@ class StudentController extends Controller
         echo "Data saved successfully!";
     }
   }
+
+
+  function listStudentApi(){
+    return Student::all();
+  }
 }
