@@ -15,3 +15,9 @@ Route::get('/test', function () {
 
 Route::get('/list-student',[StudentController::class,'listStudentApi']);
 
+Route::post('/add-student',[StudentController::class,'addStudentApi']);
+// {
+//     "name":"saleem2 Abbas",
+//     "email":"saleem2@gmail.com",
+//     "batch":"22"
+//   }

@@ -17,9 +17,9 @@ class StudentController extends Controller
     
     function addstudent(Request $request){
         $student = new Student();
-        $student->Name = $request->name;
-        $student->Email = $request->email;
-        $student->Batch = $request->batch;
+        $student->name = $request->name;
+        $student->email = $request->email;
+        $student->batch = $request->batch;
         $student->save();
         if ($student){
             return redirect("liststudent");
@@ -52,9 +52,9 @@ class StudentController extends Controller
   function editStd(Request $request,$id){
     
     $student = Student::find(  $id);
-    $student->Name = $request->name;
-    $student->Email = $request->email;
-    $student->Batch = $request->batch;
+    $student->name = $request->name;
+    $student->email = $request->email;
+    $student->batch = $request->batch;
     if ($student->save()){
         return redirect("liststudent");
     }
@@ -100,4 +100,20 @@ class StudentController extends Controller
   function listStudentApi(){
     return Student::all();
   }
+
+
+  function addStudentApi(Request $request){
+    $student = new Student();
+    $student->name = $request->name;
+    $student->email = $request->email;
+    $student->batch = $request->batch;
+    
+    if ($student->save()){
+        return ['result'=>'Data added'];
+    }
+    else {
+      return ['result'=>'Data not added'];
+    }
+
+}
 }
