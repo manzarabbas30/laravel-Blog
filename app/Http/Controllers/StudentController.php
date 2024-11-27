@@ -133,4 +133,16 @@ function updateStudentApi(Request $request){
 
 }
 
+function deleteStudentApi($id){
+  $student = Student::destroy($id);
+
+  if ($student){
+    return ['result'=>'Data Deleted'];
+}
+else {
+  return ['result'=>'Data not Deleted'];
+}
+  }
+
+
 }

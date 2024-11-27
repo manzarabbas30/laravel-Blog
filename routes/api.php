@@ -30,3 +30,6 @@ Route::put('/update-student',[StudentController::class,'updateStudentApi']);
 //      "email":"ali@gmail.com",
 //      "batch":"212"
 //   }
+
+Route::delete('/delete-student/{id}',[StudentController::class,'deleteStudentApi']);
+
