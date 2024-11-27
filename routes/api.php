@@ -33,3 +33,6 @@ Route::put('/update-student',[StudentController::class,'updateStudentApi']);
 
 Route::delete('/delete-student/{id}',[StudentController::class,'deleteStudentApi']);
 
+
+Route::get('/search-student/{key}',[StudentController::class,'searchStudentApi']);
+

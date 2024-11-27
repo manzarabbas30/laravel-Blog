@@ -144,5 +144,17 @@ else {
 }
   }
 
+ function searchStudentApi($key){
+  $student = Student::where('name','like',"%$key%")->get();
+
+  if ($student){
+    return ['result'=>$student];
+  }
+  else {
+    return ['result'=>'Data not Found'];
+  }
+
+ }
+
 
 }
