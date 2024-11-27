@@ -21,3 +21,12 @@ Route::post('/add-student',[StudentController::class,'addStudentApi']);
 //     "email":"saleem2@gmail.com",
 //     "batch":"22"
 //   }
+
+
+Route::put('/update-student',[StudentController::class,'updateStudentApi']);
+// {
+//     "id":"30",
+//      "name":"Ali Abbas",
+//      "email":"ali@gmail.com",
+//      "batch":"212"
+//   }

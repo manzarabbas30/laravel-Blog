@@ -116,4 +116,21 @@ class StudentController extends Controller
     }
 
 }
+
+
+function updateStudentApi(Request $request){
+  $student = Student::find($request->id);
+  $student->name = $request->name;
+  $student->email = $request->email;
+  $student->batch = $request->batch;
+  
+  if ($student->save()){
+      return ['result'=>'Data updated'];
+  }
+  else {
+    return ['result'=>'Data not updated'];
+  }
+
+}
+
 }
