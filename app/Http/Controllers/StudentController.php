@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use PHPUnit\Framework\MockObject\Stub\ReturnReference;
+use Illuminate\Support\Facades\Validator;
 class StudentController extends Controller
 {
     function getdata(){
@@ -103,6 +104,20 @@ class StudentController extends Controller
 
 
   function addStudentApi(Request $request){
+    //validation
+    $rules= array(
+      'name'=> 'required | min:2 | max:10',
+      'email' => 'email | required',
+      'batch' => 'required'
+    );
+
+    $validation = Validator::make($request->all(),$rules);
+    if($validation->fails()){
+      return $validation->errors();
+    }
+    else{
+
+    
     $student = new Student();
     $student->name = $request->name;
     $student->email = $request->email;
@@ -114,7 +129,7 @@ class StudentController extends Controller
     else {
       return ['result'=>'Data not added'];
     }
-
+  }
 }
 
 
