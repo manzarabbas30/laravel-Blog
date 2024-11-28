@@ -13,7 +13,7 @@ class userAuthController extends Controller
         $input["password"]= bcrypt($input["password"]);
         $user= User::create($input);
         $success["token"]= $user->createToken('MyApp')->plainTextToken;
-        $user["name"]=$user->name;
+        // $user["name"]=$user->name;
         return ["success"=>true,"result"=>$success,"msg"=> "Token created Successfully"];
     }
 
