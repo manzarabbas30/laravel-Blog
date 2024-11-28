@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\resourceController;
-
+use App\Http\Controllers\userAuthController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -38,3 +38,8 @@ Route::delete('/delete-student/{id}',[StudentController::class,'deleteStudentApi
 Route::get('/search-student/{key}',[StudentController::class,'searchStudentApi']);
 
 Route::resource('member',resourceController::class);
+
+
+Route::post('/signup',[userAuthController::class,'Apisignup']);
+
+Route::post('/login',[userAuthController::class,'Apilogin']);
